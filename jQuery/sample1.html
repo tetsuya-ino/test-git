@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title></title>
+<meta charset="utf-8">
+<meta name="description" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.1.min.js"></script>
+<style>
+.open {
+    width:50px;
+    margin: 10px 0;
+    padding: 10px;
+    background:#66CC99;
+    cursor: pointer;
+}
+#slideBox {
+    display:none;
+    padding: 10px;
+    border: 1px solid #BFFFBF;
+}
+</style>
+</head>
+<body>
+<!-- Place your content here -->
+<p class="open">ボタン</p>
+<div id="slideBox">
+スライドパネルのサンプルです。ボタンを押すと閉じたり、開いたりします。 
+スライドパネルのサンプルです。
+ボタンを押すと閉じたり、開いたりします。
+スライドパネルのサンプルです。
+ボタンを押すと閉じたり、開いたりします。
+スライドパネルのサンプルです。
+ボタンを押すと閉じたり、開いたりします。
+</div>
+<!-- SCRIPTS -->
+<script type="text/javascript">
+<!--
+$(function(){
+    $(".open").click(function(){
+        $("#slideBox").slideToggle("slow");
+    });
+});
+-->
+</script>
+</body>
+</html>
+
