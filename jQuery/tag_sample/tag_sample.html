@@ -339,30 +339,33 @@ rootWindow = window;
 <div id="">
 <script type="text/javascript">
 <!--
+// 店舗を選択したときのコールバック
 function selectCallBack() {
 
+	// ダミー（選択される店舗）
 	var plinfo = jQuery('#ul_placeInfo');
 	plinfo.append('<li id="li_placeInfo_0">');
-	plinfo.append('<a href="javascript:void(0)" id="placeInfo_p00001" targetname="modalFrame-8.073562921225964-1473989680551">テスト店舗</a>');
+	plinfo.append('<a href="javascript:void(0)" id="placeInfo_p00001" targetname="target">テスト店舗</a>');
 	plinfo.append('<input type="button" value="削除" class="gr-btn-02 ml05">');
 	plinfo.append('<input type="hidden" name="placeInfo" value="p00001">');
 	plinfo.append('</li>');
 
+	// 位置IDを取り出す
 	var plinfo_a = plinfo.find('a');
-	console.log(plinfo_a);
-	console.log(plinfo_a.text());
-	console.log(plinfo_a.attr('id'));
 	var plinfo_id = plinfo_a.attr('id');
 	var idx = plinfo_id.indexOf('_');
 	var placeId = plinfo_id.substring(idx + 1, plinfo_id.length);
-	console.log(placeId);
 
+	// これも本来ならいらない
 	closeModalDialog();
 
+	// タグを取得する
 	getContentTagData(placeId);
 }
 
+// 指定された場所IDのタグを取得する
 function getContentTagData(placeId) {
+	// パラメータ
 	var param ="{"
 		+ "\"paramOid\":\"" + placeId + "\""
 		+ "}";
@@ -378,13 +381,12 @@ function getContentTagData(placeId) {
 		+ "\"timezoneTo\":\"20:00\","
 		+ "\"dayOfWeek\":[1,2,4,6,9]"
 		+ "}}}"
-
-//	console.log(data);
 	var json = $.parseJSON(data); 
-//	console.log(json);
 	var contentTag = json.results.contentTag;
-
+	
+	// 取得したタグをセット
 	setContentTag(contentTag);
+
 /*
 	$.ajax( {
 		type: "POST",
@@ -406,8 +408,9 @@ function getContentTagData(placeId) {
 */
 }
 
+// 取得したタグを画面にセットする
 function setContentTag(contentTag) {
-	console.log(contentTag);
+//	console.log(contentTag);
 	
 	// イチオシフラグ
 	var recommenFlg = contentTag.recommenFlg;
@@ -418,7 +421,7 @@ function setContentTag(contentTag) {
 	
 	// セグメントタグ
 	var segmentArray = contentTag.segment;
-	var ul_segment = jQuery('#ul_segment');
+	var ul_segment = $('#ul_segment');
 	for (var i=0; i<segmentArray.length ;i++) {
 		segId = segmentArray[i].id;
 		segName = segmentArray[i].name;
@@ -431,7 +434,7 @@ function setContentTag(contentTag) {
 	
 	// ネガティブタグ
 	var negativeTagArray = contentTag.negativeTag;
-	var ul_negative = jQuery('#ul_negativeTag');
+	var ul_negative = $('#ul_negativeTag');
 	for (var i=0; i<negativeTagArray.length ;i++) {
 		segId = negativeTagArray[i].id;
 		segName = negativeTagArray[i].name;
@@ -444,7 +447,7 @@ function setContentTag(contentTag) {
 	
 	// コンパスタッチ
 	var targetDeviceArray = contentTag.targetDevice;
-	var ul_targetDevice = jQuery('#ul_targetDevice');
+	var ul_targetDevice = $('#ul_targetDevice');
 	for (var i=0; i<targetDeviceArray.length ;i++) {
 		dvId = targetDeviceArray[i].id;
 		dvName = targetDeviceArray[i].name;
@@ -459,8 +462,8 @@ function setContentTag(contentTag) {
 	var timezoneFrom = contentTag.timezoneFrom;
 	var f_h = timezoneFrom.substring(0, 2);
 	var f_m = timezoneFrom.substring(3, 5);
-	var select_timezoneFrom_h = jQuery('#h_timezoneFrom');
-	var select_timezoneFrom_m = jQuery('#m_timezoneFrom');
+	var select_timezoneFrom_h = $('#h_timezoneFrom');
+	var select_timezoneFrom_m = $('#m_timezoneFrom');
 	select_timezoneFrom_h.val(f_h);
 	select_timezoneFrom_m.val(f_m);
 	
@@ -468,14 +471,14 @@ function setContentTag(contentTag) {
 	var timezoneTo = contentTag.timezoneTo;
 	var t_h = timezoneTo.substring(0, 2);
 	var t_m = timezoneTo.substring(3, 5);
-	var select_timezoneTo_h = jQuery('#h_timezoneTo');
-	var select_timezoneTo_m = jQuery('#m_timezoneTo');
+	var select_timezoneTo_h = $('#h_timezoneTo');
+	var select_timezoneTo_m = $('#m_timezoneTo');
 	select_timezoneTo_h.val(t_h);
 	select_timezoneTo_m.val(t_m);
 	
 	// 曜日
 	var dayOfWeek = contentTag.dayOfWeek;
-	var check_dayOfWeek = jQuery('input[name="dayOfWeek"]');
+	var check_dayOfWeek = $('input[name="dayOfWeek"]');
 	check_dayOfWeek.val(dayOfWeek);
 	
 }
@@ -511,6 +514,7 @@ function setContentTag(contentTag) {
 <p class="modal-restore" id="modal-restore-root">元に戻す</p>
 <p class="modal-close" id="modal-close-root">閉じる</p>
 
+テスト店舗
 
 <input type="button" class="gr-btn" value="確定" onclick="selectCallBack();" />
 
