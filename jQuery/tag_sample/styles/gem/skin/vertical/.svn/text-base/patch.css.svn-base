@@ -1,0 +1,11 @@
+﻿@charset "utf-8";
+
+/*----------------------------------------------------
+  Patch Styles
+----------------------------------------------------*/
+
+/* jqGridの横スクロール */
+.ui-jqgrid div.ui-jqgrid-bdiv {
+overflow-y:hidden;
+padding-bottom: 12px;
+}

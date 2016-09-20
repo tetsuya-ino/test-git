@@ -1,0 +1,488 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>tag sample</title>
+<script type="text/javascript">
+contentPath = "/tag_sample";
+contextPath = "/tag_sample/sample";
+scriptContext = {};
+document.scriptContext = scriptContext;
+scriptContext.locale = {};
+scriptContext.locale.defaultLocale = "ja";
+rootWindow = window;
+</script>
+<script type="text/javascript" src="scripts/gem/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="scripts/gem/jquery-ui-1.10.0.custom.min.js"></script>
+<script type="text/javascript" src="scripts/gem/functions.js?version=1.2.5-SNAPSHOT-20130418-1"></script>
+<script type="text/javascript" src="scripts/gem/common.js?version=1.2.5-SNAPSHOT-20130418-1"></script>
+<script type="text/javascript" src="scripts/gem/plugin/jquery.flatheights.js"></script>
+<script type="text/javascript" src="scripts/gem/skin/vertical/design.js?version=1.2.5-SNAPSHOT-20130418-1"></script>
+
+<link rel="stylesheet" type="text/css" media="screen, print" href="styles/upf/common.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="styles/gem/skin/vertical/ui-lightness/jquery-ui-1.10.0.custom.css" />
+<link rel="stylesheet" type="text/css" media="screen, print" href="styles/gem/skin/vertical/base.css?version=1.2.5-SNAPSHOT-20130418-1" />
+<link rel="stylesheet" type="text/css" media="screen, print" href="styles/gem/skin/vertical/structure.css?version=1.2.5-SNAPSHOT-20130418-1" />
+<link rel="stylesheet" type="text/css" media="screen, print" href="styles/gem/skin/vertical/module.css?version=1.2.5-SNAPSHOT-20130418-1" />
+<link rel="stylesheet" type="text/css" media="screen, print" href="styles/gem/skin/vertical/clear.css?version=1.2.5-SNAPSHOT-20130418-1" />
+<link rel="stylesheet" type="text/css" media="screen, print" href="styles/gem/theme/black/color.css?version=1.2.5-SNAPSHOT-20130418-1" />
+</head>
+<body class="">
+<div id="container">
+<div id="header-container">
+<div id="header">
+<div id="title">
+<h1>
+<span>tag sample</span>
+</h1>
+</div>
+</div><!--header-->
+</div><!--header-container-->
+
+
+<div id="content">
+
+<div id="content-inner">
+<div id="main">
+<div id="main-inner">
+<script type="text/javascript">
+</script>
+
+<h2 class="hgroup-01">
+<span>
+<img src="images/gem/icon-heddefault-01.gif" alt="" />
+</span>
+イベント／キャンペーン（まち）</h2>
+<div class="inner d_upf_contents_event_EventCampaign">
+
+<h3 class="hgroup-02">イベント／キャンペーン（まち）の編集</h3>
+
+<form id="detailForm" method="post" action="">
+<div class="lyt-edit-01">
+<ul class="list-flat-01 edit-bar">
+<li class="btn insert-btn"><input type="button" class="gr-btn" value="登録" onclick="return false;" /></li>
+<li class="mt05 cancel-link"><a href="javascript:void(0)" onclick="return false;">キャンセル</a></li>
+</ul>
+<ul class="nav-disc-all">
+<li class="all-open"><a href="#">全て開く</a></li>
+<li class="all-close"><a href="#">全て閉じる</a></li>
+</ul>
+</div><!--lyt-edit-01-->
+<ul class="nav-section">
+</ul>
+
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>基本情報</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<td class="sec-data" colspan="2">
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>開催場所</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<th width="18%" id="id_th_placeInfo" class="">
+開催場所<span class="ico-required ml10 vm">必須</span>
+</th>
+<td width="82%" id="id_td_placeInfo" class="">
+<ul id="ul_placeInfo" deletable="true" class="mb05">
+</ul>
+<input type="button" value="選択" class="gr-btn-02 modal-btn" id="sel_btn_placeInfo" propName="placeInfo" />
+</td></tr>
+
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>レコメンドタグ</span></h3>
+</div>
+<div style="">
+&nbsp;&nbsp;<a href="">全選択</a> / <a href="">全解除</a> / <a href="">デフォルトを読み込む</a>　
+　
+　<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<th width="18%" id="id_th_recommenFlg" class="">
+イチオシ</th>
+<td width="82%" id="id_td_recommenFlg" class="">
+<ul class="list-radio-01">
+<li><label><input type="radio" name="recommenFlg" value="true"  /> ON</label></li>
+<li><label><input type="radio" name="recommenFlg" value="false" checked /> OFF</label></li>
+</ul>
+<input type="hidden" name="recommenFlgType" value="Radio" />
+</td></tr>
+<tr>
+<td class="sec-data" colspan="2">
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>セグメント</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<th width="18%" id="id_th_segment" class="">
+対象セグメント</th>
+<td width="82%" id="id_td_segment" class="">
+<p class="mb05">
+<ul id="ul_segment" deletable="true" class="mb05">
+</ul>
+<input type="button" value="選択" class="gr-btn-02 modal-btn" id="sel_btn_segment" propName="segment" />
+</p>
+<p class="explanation">※対象としたいセグメントを選択してください。</p>
+</td></tr>
+<tr>
+<th width="18%" id="id_th_negativeTag" class="">
+ネガティブタグ</th>
+<td width="82%" id="id_td_negativeTag" class="">
+<p class="mb05">
+<ul id="ul_negativeTag" deletable="true" class="mb05">
+</ul>
+
+<input type="button" value="選択" class="gr-btn-02 modal-btn" id="sel_btn_negativeTag" propName="negativeTag" />
+</p>
+<p class="explanation">※このセグメントには出したくないという場合に設定します。</p>
+</td></tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="sec-data" colspan="2">
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>環境因子</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<td class="sec-data" colspan="2">
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>コンパスタッチ指定</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<th width="18%" id="id_th_targetDevice" class="">
+コンパスタッチ</th>
+<td width="82%" id="id_td_targetDevice" class="">
+<p class="mb05">
+<ul id="ul_targetDevice" deletable="true" class="mb05">
+</ul>
+<input type="button" value="選択" class="gr-btn-02 modal-btn" id="sel_btn_targetDevice" propName="targetDevice" />
+</p>
+<p class="explanation">※指定されたコンパスタッチに優先して表示します</p>
+</td></tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="sec-data" colspan="2">
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>時間帯指定</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<th width="18%" id="id_th_timezoneFrom" class="">
+時間帯（From）</th>
+<td width="32%" id="id_td_timezoneFrom" class="">
+<label>
+<select id="h_timezoneFrom" class="inpbr form-size-11" onchange="timeChange(&#039;timezoneFrom&#039;)">
+<option value="  ">--</option>
+<option value="00" >00</option>
+<option value="01" >01</option>
+<option value="02" >02</option>
+<option value="03" >03</option>
+<option value="04" >04</option>
+<option value="05" >05</option>
+<option value="06" >06</option>
+<option value="07" >07</option>
+<option value="08" >08</option>
+<option value="09" >09</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+<option value="13" >13</option>
+<option value="14" >14</option>
+<option value="15" >15</option>
+<option value="16" >16</option>
+<option value="17" >17</option>
+<option value="18" >18</option>
+<option value="19" >19</option>
+<option value="20" >20</option>
+<option value="21" >21</option>
+<option value="22" >22</option>
+<option value="23" >23</option>
+</select>時</label>
+<label>
+<select id="m_timezoneFrom" class="inpbr form-size-11" onchange="timeChange(&#039;timezoneFrom&#039;)">
+<option value="  ">--</option>
+<option value="00" >00</option>
+<option value="30" >30</option>
+</select>分</label>
+<input type="hidden" id="s_timezoneFrom" value="00" />
+<input type="hidden" name="timezoneFrom" id="i_timezoneFrom" value="" />
+</td><th width="18%" id="id_th_timezoneTo" class="">
+時間帯（To）</th>
+<td width="32%" id="id_td_timezoneTo" class="">
+<label>
+<select id="h_timezoneTo" class="inpbr form-size-11" onchange="timeChange(&#039;timezoneTo&#039;)">
+<option value="  ">--</option>
+<option value="00" >00</option>
+<option value="01" >01</option>
+<option value="02" >02</option>
+<option value="03" >03</option>
+<option value="04" >04</option>
+<option value="05" >05</option>
+<option value="06" >06</option>
+<option value="07" >07</option>
+<option value="08" >08</option>
+<option value="09" >09</option>
+<option value="10" >10</option>
+<option value="11" >11</option>
+<option value="12" >12</option>
+<option value="13" >13</option>
+<option value="14" >14</option>
+<option value="15" >15</option>
+<option value="16" >16</option>
+<option value="17" >17</option>
+<option value="18" >18</option>
+<option value="19" >19</option>
+<option value="20" >20</option>
+<option value="21" >21</option>
+<option value="22" >22</option>
+<option value="23" >23</option>
+</select>時</label>
+<label>
+<select id="m_timezoneTo" class="inpbr form-size-11" onchange="timeChange(&#039;timezoneTo&#039;)">
+<option value="  ">--</option>
+<option value="00" >00</option>
+<option value="30" >30</option>
+</select>分</label>
+<input type="hidden" id="s_timezoneTo" value="00" />
+<input type="hidden" name="timezoneTo" id="i_timezoneTo" value="" />
+</td></tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+<tr>
+<td class="sec-data" colspan="2">
+<div class="">
+<div class="hgroup-03 sechead">
+
+<h3 id=""><span>曜日指定</span></h3>
+</div>
+<div style="">
+<table class="tbl-data-02" cellspacing="0" width="100%">
+<tr>
+<th width="18%" id="id_th_dayOfWeek" class="">
+曜日</th>
+<td width="82%" id="id_td_dayOfWeek" class="">
+<ul class="list-check-01">
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="0"  /> 日</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="1"  /> 月</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="2"  /> 火</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="3"  /> 水</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="4"  /> 木</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="5"  /> 金</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="6"  /> 土</label></li>
+<li><label>
+<input type="checkbox" name="dayOfWeek" value="9"  /> 祝</label></li>
+</ul>
+</td></tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+
+<div id="">
+<script type="text/javascript">
+<!--
+
+function selectCallBack() {
+
+	var plinfo = jQuery('#ul_placeInfo');
+	plinfo.append('<li id="li_placeInfo_0">');
+	plinfo.append('<a href="javascript:void(0)" id="placeInfo_p00001" targetname="modalFrame-8.073562921225964-1473989680551">テスト店舗</a>');
+	plinfo.append('<input type="button" value="削除" class="gr-btn-02 ml05">');
+	plinfo.append('<input type="hidden" name="placeInfo" value="p00001">');
+	plinfo.append('</li>');
+
+	var plinfo_a = plinfo.find('a');
+	console.log(plinfo_a);
+	console.log(plinfo_a.text());
+	console.log(plinfo_a.attr('id'));
+	var plinfo_id = plinfo_a.attr('id');
+	var idx = plinfo_id.indexOf('_');
+	var placeId = plinfo_id.substring(idx + 1, plinfo_id.length);
+	console.log(placeId);
+
+	closeModalDialog();
+
+	getContentTagData(placeId);
+}
+
+function getContentTagData(placeId) {
+	var param ="{"
+		+ "\"paramOid\":\"" + placeId + "\""
+		+ "}";
+
+	// タグのデータ （本当はサーバから取得する）
+	var data = "{\"results\":{"
+		+ "\"contentTag\":{"
+		+ "\"recommenFlg\":true,"
+		+ "\"segment\":[\"seg01\",\"seg02\"],"
+		+ "\"negativeTag\":[\"seg03\",\"seg04\"],"
+		+ "\"targetDevice\":[\"p1\",\"p2\"],"
+		+ "\"timezoneFrom\":\"09:30\","
+		+ "\"timezoneTo\":\"20:00\","
+		+ "\"dayOfWeek\":[1,2,3,4,5]"
+		+ "}}}"
+
+//	console.log(data);
+	var json = $.parseJSON(data); 
+//	console.log(json);
+	var contentTag = json.results.contentTag;
+
+	setContentTag(contentTag);
+/*
+	$.ajax( {
+		type: "POST",
+		scriptCharset: 'utf-8',
+		url: "/xxxx/getcontent",
+		dataType : 'json',
+		data: param,
+		contentType: 'application/json',
+	}).done(function(object) {
+		var results = object.results;
+		console.log(results);
+
+	}).fail(function(jqXHR, textStatus, errorThrown) {
+		console.log(jqXHR);
+		console.log(textStatus);
+		console.log(errorThrown);
+		alert('データ取得に失敗しました。');
+	});
+*/
+}
+
+function setContentTag(contentTag) {
+	// イチオシフラグ
+	var recommenFlg = contentTag.recommenFlg;
+	if (recommenFlg) {
+		var check = $('input[name="recommenFlg"]:eq(0)');
+		check.prop('checked', true);
+	}
+	
+	// セグメントタグ
+	
+	
+	// ネガティブタグ
+	
+	
+	
+	// コンパスタッチ
+	
+	
+	// 時間帯From
+	
+	
+	// 時間帯To
+	
+	
+	// 曜日
+	
+	
+}
+
+//-->
+</script>
+</div>
+<div class="lyt-edit-02">
+<ul class="list-flat-01 edit-bar">
+<li class="btn insert-btn"><input type="button" class="gr-btn" value="登録" onclick="" /></li>
+<li class="mt05 cancel-link"><a href="javascript:void(0)" onclick="cancel();return false;">キャンセル</a></li>
+</ul>
+</div><!--lyt-edit-01-->
+</form>
+</div>
+</div><!-- main-inner -->
+</div><!-- main -->
+</div><!-- content-inner -->
+</div><!-- content -->
+
+<div id="footer">
+<div id="footer-inner">
+<p id="copyright">COPYRIGHT .....</p>
+<p id="pagetop"><a href="#container">ページの先頭へ</a></p>
+</div><!--footer-inner-->
+</div><!--footer--><div class="modal-dialogs">
+<div class="modal-dialog" id="modal-dialog-root">
+<div class="modal-wrap">
+</div>
+<div class="modal-inner">
+<h2 class="hgroup-01"><span id="modal-title"></span></h2>
+<p class="modal-maximize" id="modal-maximize-root">最大化</p>
+<p class="modal-restore" id="modal-restore-root">元に戻す</p>
+<p class="modal-close" id="modal-close-root">閉じる</p>
+
+
+<input type="button" class="gr-btn" value="確定" onclick="selectCallBack();" />
+
+
+<iframe name="modalFrame-760.2045248527736-1473987433988" src="about:blank" height="686" width="100%" style="" frameborder="0">
+</iframe>
+</div><!--modal-inner-->
+</div><!--modal-dialog-->
+</div><!--modal-dialogs-->
+
+<div class="tooltip-wrap">
+<div class="tooltip">
+<p class="tooltxt"></p>
+<span class="tool-icon"></span>
+</div><!--tooltip-->
+</div><!--tooltip-wrap-->
+</div><!-- container  -->
+</body>
+</html>

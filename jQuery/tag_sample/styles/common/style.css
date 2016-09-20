@@ -1,0 +1,240 @@
+/* メッセージエリア */
+.info {
+	color: blue;
+}
+
+.error {
+	color: red;
+}
+
+p.error {
+	margin-top: 4px;
+}
+
+.ul_error {
+	color: red;
+}
+
+.hidden_section {
+	display: none;
+}
+
+span.property_description {
+	color: #606060;
+	font-size: 85%;
+}
+
+.invalid {
+	text-decoration: line-through;
+}
+
+#main table.tbl-data-02 p.property_description,#main table.tbl-data-02 p.error
+	{
+	margin-bottom: 0px;
+}
+
+/* 日付選択用 */
+input.datepicker {
+	width: 60px;
+}
+
+button.ui-datepicker-trigger {
+	width: 23px;
+	height: 19px;
+	border: none;
+	text-indent: -2000px;
+	overflow: hidden;
+	background: url(../../images/icon_calender_01.gif) no-repeat;
+}
+
+button.ui-datepicker-trigger:hover {
+	background: url(../../images/icon_calender_01_o.gif) no-repeat;
+}
+
+/* ネストテーブル上部のボタン */
+input.table-top-button {
+	margin-bottom: 10px;
+}
+input.table-bottom-button {
+	margin-bottom: 15px;
+}
+
+/* プロパティのヘッダ */
+ul.property li {
+	display: inline;
+	float: left;
+}
+
+#main ul.property li.must p {
+	background: url(../../images/icon_must__aka_01.gif) no-repeat;
+	width: 29px;
+	height: 13px;
+	margin-top: 2px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+}
+
+#main ul.property li.tooltip p {
+	background: url(../../images/icon_information_01.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+	margin-left: 5px;
+	margin-bottom: 0px;
+}
+
+/* セクションへのページ内リンク */
+#main p.nav-section {
+	width: 85%;
+	float: left;
+	text-align: left;
+	margin-bottom: 0px;
+}
+
+p.nav-section a {
+	display: inline-block;
+	margin-left: 5px;
+	padding-left: 12px;
+}
+
+/* セクションの全展開・全縮小 */
+#main p.nav-disc-all {
+	width: 100px;
+	float: right;
+	margin-bottom: 0px;
+}
+
+div.clear_div {
+	clear: left;
+	height: 15px;
+}
+
+/* ツールチップのスタイル */
+#tt {
+	position: absolute;
+	display: block;
+	z-index: 99;
+	font-size: 83%;
+	text-align: left;
+}
+
+#tttop {
+	display: block;
+	height: 0px;
+	margin-left: 5px;
+	overflow: hidden;
+}
+
+#ttcont {
+	display: block;
+	padding: 2px 12px 3px 7px;
+	margin-left: 5px;
+	background: #FFFFDD;
+	border: solid black 1px;
+}
+
+#ttbot {
+	display: block;
+	height: 5px;
+	margin-left: 5px;
+	overflow: hidden;
+}
+
+/* その他 */
+p.loading {
+	background: url(../../images/loading.gif) no-repeat;
+	width: 16px;
+	height: 16px;
+	margin: 2px;
+}
+
+/** 文字フォント */
+body {
+	font-family: sans-serif;
+}
+
+/** カレンダー */
+table.calendar {
+	margin-bottom:10px;
+	width: 100%;
+	table-layout:fixed;
+}
+table.calendar div.target {
+	width:85%;
+	float:left;
+}
+table.calendar div.target span {
+	margin-left: 5px;
+}
+table.calendar div.preview,
+table.calendar div.now,
+table.calendar div.next {
+	width:5%;
+	float:right;
+	text-align: center;
+}
+table.calendar tr.dayOfWeek td {
+	text-align:center;
+	font-weight:bold;
+}
+table.calendar .dayOfWeek0 {
+	color:red;
+}
+table.calendar .dayOfWeek6 {
+	color:blue;
+}
+table.calendar tr.week td {
+	text-align:center;
+}
+table.calendar .entityList {
+	text-align: left;
+}
+table.calendar .addList {
+	text-align: right;
+	vertical-align: top;
+}
+table.calendar .addList li{
+	float: right;
+	display: inline;
+}
+#main table.calendar .addList li p{
+	margin-top: 2px;
+	margin-left: 2px;
+	margin-bottom: 0px;
+}
+table.calendar .entityList ul,
+table.calendar .addList ul {
+	margin-left: 2px;
+	margin-right: 2px;
+}
+
+div.audit-log-section table.tbl-data-02 td {
+	border-bottom: none;
+}
+
+div.audit-log-section div.nav-linear-01 {
+	margin-bottom: 0;
+}
+
+/** TOP画面パーツ */
+div.topviewparts div.inner {
+	margin-bottom: 15px;
+}
+div.separator_left {
+	float: left;
+	width: 49.5%;
+}
+div.separator_right {
+	/*margin-left: 50.5%;*/
+	float: right;
+	width: 49.5%
+}
+div.separator_bottom {
+   clear: both;
+}
+p.role_select {
+	border-radius: 3px 3px 3px 3px;
+	float: right;
+	padding: 4px 6px;
+	height: 23.6px;
+	margin-right: 3px;
+}

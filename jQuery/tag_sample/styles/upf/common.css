@@ -1,0 +1,22 @@
+﻿@charset "utf-8";
+
+td.width_max input {
+	width:95%;
+}
+
+td.width_mid input {
+	width:50%;
+}
+
+
+td.width_min input {
+	width:20%;
+}
+
+th.col3 {
+    width:11%;
+}
+
+td.col3 {
+    width:22%;
+}

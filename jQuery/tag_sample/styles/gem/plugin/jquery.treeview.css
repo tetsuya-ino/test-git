@@ -1,0 +1,34 @@
+div.divtree {
+	overflow-x:auto;
+}
+div.divtree li {
+	white-space: nowrap;
+}
+
+div.nav-menu-02 ul.treeview,
+div.nav-menu-02 ul.treeview ul {
+	margin: 0;
+}
+
+div.nav-menu-02 ul.treeview li{
+	margin-top: 3px;
+	margin-bottom: 0px;
+	padding-top:3px;
+	padding-bottom:1px;
+	line-height: 1;
+}
+
+.treeview .hover {
+	color: red;
+	cursor: pointer;
+}
+
+div.nav-menu-02 div.divtree ul a:active,
+div.nav-menu-02 div.divtree ul a:hover,
+div.nav-menu-02 div.divtree ul a:focus {
+    color: #0F6099;
+}
+div.nav-menu-02 div.divtree ul a,
+div.nav-menu-02 div.divtree ul a:visited {
+    color: #178FE5;
+}
