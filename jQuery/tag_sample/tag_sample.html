@@ -339,7 +339,6 @@ rootWindow = window;
 <div id="">
 <script type="text/javascript">
 <!--
-
 function selectCallBack() {
 
 	var plinfo = jQuery('#ul_placeInfo');
@@ -372,12 +371,12 @@ function getContentTagData(placeId) {
 	var data = "{\"results\":{"
 		+ "\"contentTag\":{"
 		+ "\"recommenFlg\":true,"
-		+ "\"segment\":[\"seg01\",\"seg02\"],"
-		+ "\"negativeTag\":[\"seg03\",\"seg04\"],"
-		+ "\"targetDevice\":[\"p1\",\"p2\"],"
+		+ "\"segment\":[{\"id\":\"seg01\",\"name\":\"男性・単数\"},{\"id\":\"seg02\",\"name\":\"男性・複数\"}],"
+		+ "\"negativeTag\":[{\"id\":\"seg03\",\"name\":\"女性・単数\"},{\"id\":\"seg04\",\"name\":\"シニア\"}],"
+		+ "\"targetDevice\":[{\"id\":\"p001\",\"name\":\"1番ポール\"},{\"id\":\"p005\",\"name\":\"5番ポール\"}],"
 		+ "\"timezoneFrom\":\"09:30\","
 		+ "\"timezoneTo\":\"20:00\","
-		+ "\"dayOfWeek\":[1,2,3,4,5]"
+		+ "\"dayOfWeek\":[1,2,4,6,9]"
 		+ "}}}"
 
 //	console.log(data);
@@ -408,6 +407,8 @@ function getContentTagData(placeId) {
 }
 
 function setContentTag(contentTag) {
+	console.log(contentTag);
+	
 	// イチオシフラグ
 	var recommenFlg = contentTag.recommenFlg;
 	if (recommenFlg) {
@@ -416,23 +417,66 @@ function setContentTag(contentTag) {
 	}
 	
 	// セグメントタグ
-	
+	var segmentArray = contentTag.segment;
+	var ul_segment = jQuery('#ul_segment');
+	for (var i=0; i<segmentArray.length ;i++) {
+		segId = segmentArray[i].id;
+		segName = segmentArray[i].name;
+		ul_segment.append('<li id="li_segment' + segId + '_0">');
+		ul_segment.append('<a href="javascript:void(0)" id="segment_' + segId + '" targetname="target">' + segName + '</a>');
+		ul_segment.append('<input type="button" value="削除" class="gr-btn-02 ml05">');
+		ul_segment.append('<input type="hidden" name="segment" value="' + segId + '_0"">');
+		ul_segment.append('</li>');
+	}
 	
 	// ネガティブタグ
-	
-	
+	var negativeTagArray = contentTag.negativeTag;
+	var ul_negative = jQuery('#ul_negativeTag');
+	for (var i=0; i<negativeTagArray.length ;i++) {
+		segId = negativeTagArray[i].id;
+		segName = negativeTagArray[i].name;
+		ul_negative.append('<li id="li_negative' + segId + '_0">');
+		ul_negative.append('<a href="javascript:void(0)" id="negative_' + segId + '" targetname="target">' + segName + '</a>');
+		ul_negative.append('<input type="button" value="削除" class="gr-btn-02 ml05">');
+		ul_negative.append('<input type="hidden" name="segment" value="' + segId + '_0"">');
+		ul_negative.append('</li>');
+	}
 	
 	// コンパスタッチ
-	
+	var targetDeviceArray = contentTag.targetDevice;
+	var ul_targetDevice = jQuery('#ul_targetDevice');
+	for (var i=0; i<targetDeviceArray.length ;i++) {
+		dvId = targetDeviceArray[i].id;
+		dvName = targetDeviceArray[i].name;
+		ul_targetDevice.append('<li id="li_negative' + dvId + '_0">');
+		ul_targetDevice.append('<a href="javascript:void(0)" id="targetDevice_' + dvId + '" targetname="target">' + dvName + '</a>');
+		ul_targetDevice.append('<input type="button" value="削除" class="gr-btn-02 ml05">');
+		ul_targetDevice.append('<input type="hidden" name="targetDevice" value="' + dvId + '_0"">');
+		ul_targetDevice.append('</li>');
+	}
 	
 	// 時間帯From
-	
+	var timezoneFrom = contentTag.timezoneFrom;
+	var f_h = timezoneFrom.substring(0, 2);
+	var f_m = timezoneFrom.substring(3, 5);
+	var select_timezoneFrom_h = jQuery('#h_timezoneFrom');
+	var select_timezoneFrom_m = jQuery('#m_timezoneFrom');
+	select_timezoneFrom_h.val(f_h);
+	select_timezoneFrom_m.val(f_m);
 	
 	// 時間帯To
-	
+	var timezoneTo = contentTag.timezoneTo;
+	var t_h = timezoneTo.substring(0, 2);
+	var t_m = timezoneTo.substring(3, 5);
+	var select_timezoneTo_h = jQuery('#h_timezoneTo');
+	var select_timezoneTo_m = jQuery('#m_timezoneTo');
+	select_timezoneTo_h.val(t_h);
+	select_timezoneTo_m.val(t_m);
 	
 	// 曜日
-	
+	var dayOfWeek = contentTag.dayOfWeek;
+	var check_dayOfWeek = jQuery('input[name="dayOfWeek"]');
+	check_dayOfWeek.val(dayOfWeek);
 	
 }
 
